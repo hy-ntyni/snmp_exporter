@@ -50,6 +50,7 @@ var (
 		Timeout:                 time.Second * 5,
 		Auth:                    DefaultAuth,
 		UseUnconnectedUDPSocket: false,
+		AllowNonIncr:   false,
 	}
 	DefaultModule = Module{
 		WalkParams: DefaultWalkParams,
@@ -69,6 +70,7 @@ type WalkParams struct {
 	Timeout                 time.Duration `yaml:"timeout,omitempty"`
 	Auth                    Auth          `yaml:"auth,omitempty"`
 	UseUnconnectedUDPSocket bool          `yaml:"use_unconnected_udp_socket,omitempty"`
+	AllowNonIncr            bool          `yaml:"allow_nonincreasing,omitempty"`
 }
 
 type Module struct {
